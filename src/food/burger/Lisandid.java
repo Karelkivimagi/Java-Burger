@@ -25,7 +25,7 @@ public class Lisandid {
         return lisandid;
     }
 
-    public double getPrice() {
+    public double getHind() {
         return hind;
     }
 }
