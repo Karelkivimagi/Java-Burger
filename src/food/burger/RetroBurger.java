@@ -10,12 +10,7 @@ public class RetroBurger extends Hamburger {
     private double hind;
     private ArrayList<String> lisandid = new ArrayList<String>();
 
-    public RetroBurger
-            (int id,
-             String nimi,
-             double hind,
-             String liha,
-             String kukkel) {
+    public RetroBurger (int id, String nimi, double hind, String liha, String kukkel) {
         super(id, nimi, hind, liha, kukkel);
     }
 
