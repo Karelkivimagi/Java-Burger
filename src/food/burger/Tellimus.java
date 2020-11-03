@@ -57,8 +57,8 @@ public class Tellimus {
     }
 
     public void printKviitung(){
-        Output.printKviitung();
-        Output.printLihaJaKuklityyp(LihaTyyp,KukliTyyp);
+        Valjastus.printKviitung();
+        Valjastus.printLihaJaKuklityyp(LihaTyyp,KukliTyyp);
         passToOutput(ostuKiri);
     }
 
@@ -69,6 +69,6 @@ public class Tellimus {
     }
 
     private void passItem(int i, Menuu item) {
-        Output.printItems(i, item);
+        Valjastus.printItems(i, item);
     }
 }

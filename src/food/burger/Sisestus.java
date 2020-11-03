@@ -1,20 +1,19 @@
 package food.burger;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 
 
-public class Input {
+public class Sisestus {
 
     private static Scanner scanner = new Scanner(System.in);
     private static Tellimus tellimus = new Tellimus();
 
 
 
-
-
-
-    public static void InputMenu() {
+    public static void ScannerMenuu() {
         printWelcome();
         boolean quit = false;
         while (!quit) {
@@ -27,13 +26,11 @@ public class Input {
                 case 1:
                     uusTellimus();
                     break;
-                case 9:
+                case 0:
                     scanner.close();
                     quit = true;
                     break;
-                case 23:
 
-                    break;
             }
         }
     }
@@ -70,7 +67,7 @@ public class Input {
 
 
     private static String ValiLihaTyyp() {
-        System.out.println("Vali lihatüüp: ([1]Kanaliha, [2]Veiseliha, [3]Sealiha)");
+        System.out.println("Valige [1] et edasi minna");
         return scanner.nextLine();
     }
 
@@ -97,22 +94,24 @@ public class Input {
         tellimus.looOst();
         printSides();
         if (i == 1) {
-            tellimus.lisaOstuLisand2(selectSide(i -1));
+            tellimus.lisaOstuLisand2(selectSide(i -0));
             tellimus.lisaBurgerOstukirja(1000, liha, kukkel);
             for (int j = 0; j < 4; j++) {
-                tellimus.lisaOstuLisand(selectSide(j + 1));
+                tellimus.lisaOstuLisand(selectSide(j + 2));
             }
         }
         if (i == 2) {
+            tellimus.lisaOstuLisand2(selectSide(i -1));
             tellimus.lisaBurgerOstukirja(1001, liha, kukkel);
             for (int j = 0; j < 4; j++) {
-                tellimus.lisaOstuLisand(selectSide(j + 1));
+                tellimus.lisaOstuLisand(selectSide(j + 2));
             }
         }
         if (i == 3) {
+            tellimus.lisaOstuLisand2(selectSide(i -2));
             tellimus.lisaBurgerOstukirja(1002, liha, kukkel);
             for (int j = 0; j < 4; j++) {
-                tellimus.lisaOstuLisand(selectSide(j + 1));
+                tellimus.lisaOstuLisand(selectSide(j + 2));
             }
         }
     }
@@ -121,15 +120,15 @@ public class Input {
     private static void printWelcome() {
 
         System.out.println("Tere tulemast!");
+        }
 
-    }
+
 
     private static void printMainMenu() {
         System.out.println(" ");
         System.out.println("Mis on teie soov? ");
-        System.out.println(" ");
-        System.out.println("[1] Uus tellimus");
-        System.out.println("[9] Välju");
+        System.out.println("[1] Tee uus tellimus");
+        System.out.println("[0] Välju");
 
     }
 
@@ -156,14 +155,12 @@ public class Input {
     private static void printSides() {
         System.out.println("Vali lisad: ");
         System.out.println(" ");
-        System.out.println("[0]Sisesta lihatüüp ([1]kana - 2€, [2]veise - 3€, [3]sea - 4€]");
-        System.out.println("[1]Juust [25s]");
-        System.out.println("[2]Kapsas [25s]");
-        System.out.println("[3]Tomat [25s]");
-        System.out.println("[4]Majonees [50s]");
-        System.out.println("[5]Hapukurk [25s]");
-        System.out.println("[6]Sibul [25s]");
-        System.out.println(" ");
-
+        System.out.println("[1]Sisesta lihatüüp ([1]kana - 2€, [2]veise - 3€, [3]sea - 4€]");
+        System.out.println("[2]Juust [25s]");
+        System.out.println("[3]Kapsas [25s]");
+        System.out.println("[4]Tomat [25s]");
+        System.out.println("[5]Majonees [50s]");
+        System.out.println("[6]Hapukurk [25s]");
+        System.out.println("[7]Sibul [25s]");
     }
 }

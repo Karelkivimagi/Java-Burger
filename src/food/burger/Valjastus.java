@@ -1,7 +1,8 @@
 package food.burger;
+import java.util.*;
 
 
-public class Output {
+public class Valjastus {
 
     public static void printKviitung() {
         System.out.println("\nOstu kviitung:\n");

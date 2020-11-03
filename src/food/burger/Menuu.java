@@ -27,15 +27,15 @@ public class Menuu {
 
     public static Menuu looLihaValik(int idd) {
         if (idd == 1) {
-            return new Sides(idd, "Kana", 2);
+            return new Lisad(idd, "Kana", 2);
         }
 
         if (idd == 2) {
-            return new Sides(idd, "Veise", 3);
+            return new Lisad(idd, "Veise", 3);
 
         }
         if (idd == 3) {
-            return new Sides(idd, "Sea", 4);
+            return new Lisad(idd, "Sea", 4);
 
         }
 
@@ -45,27 +45,27 @@ public class Menuu {
 
     public static Menuu looLisand(int id) {
         if (id == 1) {
-            return new Sides(id, "Juust", 0.25);
+            return new Lisad(id, "Juust", 0.25);
         }
 
         if (id == 2) {
-            return new Sides(id, "Kapsas", 0.25);
+            return new Lisad(id, "Kapsas", 0.25);
 
         }
         if (id == 3) {
-            return new Sides(id, "Tomat", 0.25);
+            return new Lisad(id, "Tomat", 0.25);
 
         }
         if (id == 4) {
-            return new Sides(id, "Majonees", 0.5);
+            return new Lisad(id, "Majonees", 0.5);
 
         }
         if (id == 5) {
-            return new Sides(id, "Hapukurk", 0.25);
+            return new Lisad(id, "Hapukurk", 0.25);
 
         }
         if (id == 6) {
-            return new Sides(id, "Sibul", 0.25);
+            return new Lisad(id, "Sibul", 0.25);
 
         }
 
